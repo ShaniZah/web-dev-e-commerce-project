@@ -1,0 +1,15 @@
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .logo {
+    font-family: 'Arial', sans-serif;
+    color: #000;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  

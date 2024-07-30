@@ -1,0 +1,17 @@
+.place-order {
+    margin-top: 20px;
+  }
+  
+  .order-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .order-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .btn-primary{
+    background-color: lightseagreen;
+  }

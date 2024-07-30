@@ -1,0 +1,12 @@
+/* custom.css */
+button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  button:active {
+    outline: none;
+    box-shadow: none;
+    background-image: none;
+  }
+  
