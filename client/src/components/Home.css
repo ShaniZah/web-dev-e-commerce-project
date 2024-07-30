@@ -24,22 +24,23 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   border: 1px solid #ddd;
   padding: 10px;
   text-align: center;
   border-radius: 5px;
   height: 100%;
-  /*aspect-ratio: 1; /* Ensure square aspect ratio */
 }
 
 .product-card img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  flex: 1 0 50%;
+
 }
 
+/*make all the info except the button take up 80% of the product card*/
 .product-info {
   display: flex;
   flex-direction: column;
@@ -47,6 +48,7 @@
   align-items: center;
   margin-top: 10px;
   width: 100%;
+  flex: 1 1 30%;
 }
 
 .product-info h5 {
@@ -57,10 +59,18 @@
   margin: 5px 0;
 }
 
+/*make the 'add to cart' button take up 20% of the product card*/
 .product-info button {
   margin-top: 10px;
-  background-color: lightseagreen;
+  background-color: #758694;
+  border-color: #758694;
+  flex: 1 0 20%;
 }
+
+.product-info button:hover {
+  background-color: #405D72;
+}
+
 h1{
   font-size: 100px;
   font-weight: 100;
@@ -68,3 +78,9 @@ h1{
 }
 
 
+/*resposive website settings*/
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

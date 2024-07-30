@@ -1,15 +1,47 @@
 .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo {
+  font-family: 'Arial', sans-serif;
+  color: #000;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.navbar-nav .btn {
+  display: flex;
+  align-items: center;
+}
+
+/*make little counter next to cart image*/
+.cart-count {
+  background-color: #405D72;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+/*responsive website settings*/
+@media (max-width: 600px) {
+
+  /*make navbar shrink to a row, where each element is closer to one another*/
+  .nav-link, .navbar-nav .btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
-  
-  .logo {
-    font-family: 'Arial', sans-serif;
-    color: #000;
+  .navbar-nav, .ml-auto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
-  
-  .navbar-nav .nav-link {
-    font-size: 1rem;
-    font-weight: bold;
+  .nav-link {
+    margin-right: 5px;
   }
-  
+}

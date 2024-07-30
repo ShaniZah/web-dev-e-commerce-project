@@ -45,7 +45,9 @@ const Home = ({ addToCart }) => {
               <h5 className="card-title">{product.name}</h5>
               <p className="card-text">{product.description}</p>
               <p className="card-text">{product.price} NIS</p>
-              <button className="btn btn-primary" onClick={() => addToCart(product)}>Add to Cart</button>
+              <div>
+                <button className="btn btn-primary" onClick={() => addToCart(product)}>Add to Cart</button>
+              </div>
             </div>
           </div>
         ))}

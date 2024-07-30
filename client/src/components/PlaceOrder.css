@@ -3,6 +3,7 @@
   }
   
   .order-item {
+    margin-top: 20px;
     padding: 10px;
     border-bottom: 1px solid #ccc;
   }
@@ -13,5 +14,10 @@
   }
   
   .btn-primary{
-    background-color: lightseagreen;
+    background-color: #758694;
+    margin-bottom: 30px; /* add space in bottom of the page*/
+  }
+
+  h2{
+    font-weight: 450;
   }
