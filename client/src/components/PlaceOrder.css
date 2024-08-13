@@ -1,23 +1,32 @@
-.place-order {
+
+  h2{
+    font-weight: 450;
+  }
+  .place-order {
     margin-top: 20px;
   }
   
+  /*container for each item in the order summary*/
   .order-item {
     margin-top: 20px;
     padding: 10px;
     border-bottom: 1px solid #ccc;
   }
   
+  /*settings for images within the order items */
   .order-item img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .btn-primary{
-    background-color: #758694;
-    margin-bottom: 30px; /* add space in bottom of the page*/
+    max-width: 100%; /*image doesn't go past the container width */
+    height: auto; /*aspect ratio of the image */
   }
 
-  h2{
-    font-weight: 450;
+  /*buttons settings*/
+  .btn-primary{
+    background-color: #758694;
+    border-color: #758694;
+    margin-bottom: 30px; /* add space in bottom of the page, bellow button */
   }
+  .btn-primary:hover{
+    background-color: #405D72;
+  }
+
+  

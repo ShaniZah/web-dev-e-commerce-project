@@ -29,23 +29,29 @@ const App = () => {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
   }, [cart]);
 
+  // add a product to the cart 
   const addToCart = (product) => {
     const existingProduct = cart.find(item => item.product._id === product._id);
+    // update quantity if the product exists 
     if (existingProduct) {
       setCart(cart.map(item => item.product._id === product._id ? { ...item, quantity: item.quantity + 1 } : item));
     } else {
+      // add new product
       setCart([...cart, { product, quantity: 1, price: product.price }]);
     }
   };
 
+  // update quantity of product in the cart
   const updateQuantity = (product, quantity) => {
     setCart(cart.map(item => item.product._id === product._id ? { ...item, quantity: Number(quantity) } : item));
   };
 
+  //remove a product from the cart
   const removeFromCart = (product) => {
     setCart(cart.filter(item => item.product._id !== product._id));
   };
 
+  // submit an order
   const submitOrder = (orderDetails, navigate) => {
     const order = {
       products: cart.map(item => ({ product: item.product._id, quantity: item.quantity })),
@@ -57,12 +63,13 @@ const App = () => {
       totalAmount: cart.reduce((sum, item) => sum + item.price * item.quantity, 0) + (orderDetails.shippingMethod === '3-day' ? 20 : 0)
     };
     
+    // make post request to place the order
     axios.post('http://localhost:5000/api/orders', order)
       .then(res => {
-        alert('Order placed successfully! Order ID: ${res.data._id}');
-        setCart([]);
+        alert(`Order placed successfully! Order ID: ${res.data._id}`);
+        setCart([]); // empty the cart
         localStorage.clear(); // Clean the localStorage after each Order 
-        navigate('/');
+        navigate('/'); // navigate back to homepage
       })
       .catch(err => {
         console.error('Error placing order:', err); 

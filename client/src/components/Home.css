@@ -1,86 +1,90 @@
-.hero-image {
-  background-image: url('https://images.pexels.com/photos/803212/pexels-photo-803212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Replace with your actual image path */
-  background-size: cover;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 2rem;
-}
-
-.slogan {
-  margin-top: 20px;
-  font-size: 1.5rem;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
-.product-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  height: 100%;
-}
-
-.product-card img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  flex: 1 0 50%;
-
-}
-
-/*make all the info except the button take up 80% of the product card*/
-.product-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  width: 100%;
-  flex: 1 1 30%;
-}
-
-.product-info h5 {
-  margin: 10px 0 5px;
-}
-
-.product-info p {
-  margin: 5px 0;
-}
-
-/*make the 'add to cart' button take up 20% of the product card*/
-.product-info button {
-  margin-top: 10px;
-  background-color: #758694;
-  border-color: #758694;
-  flex: 1 0 20%;
-}
-
-.product-info button:hover {
-  background-color: #405D72;
-}
-
+/*main heading*/
 h1{
   font-size: 100px;
   font-weight: 100;
   font-family: 'Times New Roman', Times, serif;
 }
 
+/*style for hero image part*/
+.hero-image {
+  background-image: url('https://images.pexels.com/photos/803212/pexels-photo-803212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Replace with your actual image path */
+  background-size: cover; /*make image cover the whole section*/
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /*color set to white for contrast*/
+  font-size: 2rem;
+}
+
+/*slogan style beneth the hero image*/
+.slogan {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+/*grid layout for product cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*3, equal width columns*/
+  gap: 20px; /*space between grid items*/
+  padding: 20px;
+}
+
+/*individual product cards*/
+.product-card {
+  display: flex;
+  flex-direction: column; /*content is stacked*/
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px; /*rounded corners */
+  height: 100%;
+}
+
+/*settings for image inside the product card */
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  flex: 1 0 50%; /*make image take 50% of the card height*/
+
+}
+
+/*style information inside the card*/
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /*distribute space evenly*/
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  flex: 1 1 30%; /*make info take 30% of the card height*/
+}
+/*product title*/
+.product-info h5 {
+  margin: 10px 0 5px;
+}
+/*product description and price*/
+.product-info p {
+  margin: 5px 0;
+}
+/*'add to cart' button*/
+.product-info button {
+  margin-top: 10px;
+  background-color: #758694;
+  border-color: #758694;
+  flex: 1 0 20%; /*make the button take up 20% of card height*/
+}
+.product-info button:hover {
+  background-color: #405D72;
+}
+
 
 /*resposive website settings*/
 @media (max-width: 600px) {
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /*make items stacked verticaly*/
   }
 }

@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import './PlaceOrder.css';
 
 const PlaceOrder = ({ cart, totalAmount, submitOrder }) => {
+  // hold order details 
   const [orderDetails, setOrderDetails] = useState({
     name: '',
     email: '',
     phone: '',
     address: '',
-    shippingMethod: '14-day'
+    shippingMethod: '14-day' // default value
   });
 
   const navigate = useNavigate();
@@ -18,19 +19,20 @@ const PlaceOrder = ({ cart, totalAmount, submitOrder }) => {
     setOrderDetails({ ...orderDetails, [name]: value });
   };
 
+  // handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('handleSubmit called');
+    // check if cart is empty 
     if (cart.length === 0) {
       alert('Your cart is empty. Please add items to your cart before placing an order.');
       return;
     }
+    // call submitOrder method prop and then navigate back to the homepage
     submitOrder(orderDetails, navigate);
   };
   
-
-
-
+  //order form
   return (
     <div className="container place-order">
       <h2>Place Order</h2>

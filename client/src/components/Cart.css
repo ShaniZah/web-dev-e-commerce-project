@@ -1,46 +1,54 @@
+/*cart header*/
+h2{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* modal settings for the cart */
 .cart-modal {
-  position: fixed;
+  position: fixed; /*fix cart model to the screen*/
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /*make the background dark semi-transparent*/
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  justify-content: center; /* center the cart content horizontally */
+  align-items: center; /* center the cart content vertically*/
+  z-index: 1000; /*make the cart modal appear above other content*/
+  overflow: hidden; /*prevents the modal from going out of screen borders*/
 }
-
 .cart-content {
-  
   background: white;
   padding: 80px;
-  border-radius: 5px;
+  border-radius: 5px; /*rounded corners*/
   width: 80%;
+  max-height: 80%; /* limit cart model so that it wont overflow*/
+  overflow-y: auto; /* make the cart content scrollable */
   max-width: 800px;
   position: relative;
 }
+.row{
+  padding-top: 50px;
+}
 
+/*buttons settings and style*/
 .close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
   background: transparent;
   border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-.row{
-  padding-top: 50px;
-}
-h2{
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
+  font-size: 24px; /* set the font size of the 'X' symbol */
+  cursor: pointer; /*change cursor to a pointer when hover */
 }
 .btn-danger{
-  background-color: salmon;
+  background-color: salmon; /*the color for the remove button is to alert danger*/
 }
 .btn-success{
-  background-color: lightgreen;
+  background-color: #758694;
+}
+.btn-success:hover{
+  background-color: #405D72;
 }

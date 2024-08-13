@@ -14,19 +14,20 @@
   margin-right: 20px;
 }
 
+/*button inside nav bar*/
 .navbar-nav .btn {
   display: flex;
   align-items: center;
 }
 
-/*make little counter next to cart image*/
+/*little counter next to cart image*/
 .cart-count {
   background-color: #405D72;
   color: white;
-  border-radius: 50%;
+  border-radius: 50%; /*make circular*/
   padding: 2px 6px;
   margin-left: 5px;
-  font-size: 0.8rem;
+  font-size: 0.8rem; /*smaller font size*/
 }
 
 /*responsive website settings*/
